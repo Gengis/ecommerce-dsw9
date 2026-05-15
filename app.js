@@ -49,7 +49,7 @@ app.use((req, res) => {
 sequelize.sync()
   .then(() => {
     console.log('Base de datos sincronizada');
-    app.listen(port, () => {
+    app.listen(port, '0.0.0.0', () => {
       console.log(`Servidor en http://localhost:${port}`);
     });
   })
